@@ -1,0 +1,630 @@
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(0, 0, 33);
+    color: white;
+}
+
+.head {
+    background-color: rgb(14, 6, 70);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 17px;
+    color: white;
+    height: 45px;
+    position: fixed;
+    z-index: 100;
+}
+
+.head nav {
+    animation: fadeUp 0.5s ease-out forwards;
+    font-weight: 600;
+}
+
+.di {
+    font-size: large;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out
+}
+
+.head nav a {
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 14px;
+    color: white;
+
+}
+
+nav a:hover {
+    color: #0ef;
+}
+
+.di:hover {
+    color: #0ef;
+}
+
+.sec {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.ironman h1 {
+    font-size: 43px;
+}
+
+.ironman {
+    display: flex;
+    font-size: 25px;
+    flex-direction: column;
+    gap: 32px;
+    padding-left: 14%;
+    width: 40%;
+}
+
+.hlw a {
+    text-decoration: none;
+    display: inline-flex;
+    border-radius: 50%;
+    border: 2px solid cyan;
+    color: cyan;
+    padding: 8px;
+
+    margin-top: 35px;
+    transition: color 0.3s ease-in-out;
+}
+
+.pp a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.pp button {
+    width: 160px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #0ef;
+    border: none;
+    height: 45px;
+
+}
+
+.hlw {
+    gap: 15px;
+    display: flex;
+}
+
+.hlw a:hover {
+    color: black;
+
+    background-color: #0ef;
+}
+
+.pp i {
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+}
+
+.pp button:hover {
+    box-shadow: 0 0 17px cyan;
+
+}
+
+.txt {
+    color: #0ef;
+}
+
+.image img {
+    height: ;
+    width: 60%;
+    border-radius: 100%;
+    box-shadow: 0 0 80px cyan;
+}
+
+.image {
+    padding-left: 10%;
+}
+
+
+.sec2 {
+    overflow: hidden;
+    /* Disables both horizontal and vertical scroll */
+
+
+    /* Or specifically for one direction */
+    .no-scroll-x {
+        overflow-x: hidden;
+    }
+
+    .no-scroll-y {
+        overflow-y: hidden;
+    }
+
+    height: 100vh;
+}
+
+.tp {
+    gap: 9px;
+    display: flex;
+    justify-content: center;
+}
+
+.tp i {
+    font-size: 45px;
+    padding-top: px;
+}
+
+.tp span {
+    color: #0ef;
+}
+
+.seperation {
+    width: 100%;
+    height: 0.1rem;
+    bottom: -0.5rem;
+    background-color: cyan;
+}
+
+
+
+.write {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 25px;
+
+}
+
+.ig img {
+    border-radius: 18px;
+    width: 280px;
+    height: 280px;
+    margin-left: 50px;
+}
+
+.content {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.abc {
+    font-size: 18px;
+}
+.write p{
+    font-size: 14px;
+}
+
+.abc h5 {
+    font-weight: 400;
+}
+
+.em span {
+    color: #0ef;
+}
+
+
+
+/* 1. Initial State (Hidden) */
+.write {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Keeps it in the "start" position */
+    transition: opacity 0.5s ease;
+    /* Smoothly hides it when scrolling away */
+}
+
+/* Active state: Triggered every time it enters the screen */
+.write.active {
+    animation: textFadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Delay for the paragraph */
+.write.active {
+    animation-delay: 0.2s;
+}
+
+.sec3{
+    min-height: 100vh;
+}
+.cc{ gap: 12px;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.io i {
+    font-size: 49px;
+}
+.cc span{
+    color: #0ef;
+}
+
+.skill {
+  display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5rem; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 50px 20px;
+}
+
+
+.skilcard {
+    background-color: transparent; 
+    padding: 20px;
+    width: 150px;
+    border-radius: 15px;
+    align-items: center;
+    transition: 0.3s;
+     box-shadow: 1PX 1PX 20PX #012290F7,
+                 1PX 1PX 40PX #0053b8f7;
+}
+
+.skilcard:hover {   
+    transform: translateY(-10px);
+   
+}
+.set{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.skilcard img {
+   width: 50px;
+    height: 50px;
+}
+.set h1{ font-size: 25px;
+    font-weight: 500;
+}
+.skilcard {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Keeps it in the "start" position */
+    transition: opacity 0.5s ease;
+    /* Smoothly hides it when scrolling away */
+}
+
+/* Active state: Triggered every time it enters the screen */
+.skilcard.active {
+    animation: textFadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Delay for the paragraph */
+.skilcard.active {
+    animation-delay: 0.2s;
+}
+.sec4{ background-color: #011145ce;
+    height: 45vh;
+    width: 100%;
+
+}
+
+.foot{
+       display: flex;
+}
+.hhb{padding: 30px 0px;
+    padding-left: 150px;
+   
+width: 24%;
+}
+.quick{display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+width: 34%;
+margin-top: 10px;
+}
+.con{
+width: 34%;
+}
+.hhb h2{ font-size: 16px;
+    font-weight: 400;
+
+}
+.quick h1{ font-size: 26px;
+    font-weight: 500;
+}
+.lin{
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+gap: 10px;
+}
+.lin a{
+    text-decoration: none;
+    color: white;
+}
+.spp{
+    max-width: 80vw;
+    margin: auto;
+    height: .1px;
+    margin-top: 80px;
+
+    background-color: cyan;
+}
+.cp{align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets and Phones (Max width 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Header/Navigation */
+    .head {
+        height: auto;
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: center;
+        position: relative; /* Optional: change to relative if it blocks content */
+    }
+
+    .head nav {
+        padding-bottom: 10px;
+    }
+
+    .head nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* 2. Hero Section (Ironman) */
+    .sec {
+        flex-direction: column-reverse; /* Put image on top of text */
+        height: auto;
+        padding: 100px 20px 50px 20px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .ironman {
+        width: 90%;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .ironman h1 {
+        font-size: 32px;
+    }
+
+    .image {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image img {
+        width: 70%; /* Smaller image on mobile */
+    }
+
+    .hlw {
+        justify-content: center;
+    }
+
+    /* 3. About Section (Section 2) */
+    .sec2 {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .write {
+        width: 90%;
+        text-align: center;
+    }
+
+    .ig img {
+        margin-left: 0; /* Center the image */
+        width: 220px;
+        height: 220px;
+    }
+
+    /* 4. Skills Grid (Section 3) */
+    .skill {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4 */
+        gap: 1.5rem;
+        padding: 30px 10px;
+    }
+
+    .skilcard {
+        width: 120px;
+    }
+
+    /* 5. Footer (Section 4) */
+    .sec4 {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .foot {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hhb, .quick, .con {
+        width: 90%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .lin {
+        align-items: center;
+    }
+   
+}
+
+/* Small Phones (Max width 480px) */
+@media screen and (max-width: 480px) {
+    .skill {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for very small phones */
+        justify-items: center;
+    }
+
+    .ironman h1 {
+        font-size: 28px;
+    }
+
+    .image img {
+        width: 90%;
+    }
+}
+
+
+/* --- Hamburger Icon Styling --- */
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+/* --- Mobile Specific Styles --- */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .head nav {
+        display: none; /* Hide the links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 62px; /* Position it below the header */
+        left: 0;
+        width: 100%;
+        background-color: rgb(14, 6, 70);
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 2px solid #0ef;
+    }
+
+    /* When the menu has the 'active' class, show it */
+    .head nav.active {
+        display: flex;
+        animation: fadeUp 0.4s ease-out forwards;
+    }
+
+    .head nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    /* Animation for the X shape when clicked */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+.con h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+.con{
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.phone{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+.phone i{
+    font-size: 24px;        
+    color: #0ef;      
+    width: 25px;            
+    text-align: center;
+
+}
+
+.phone div{
+ display: flex;           
+    align-items: center;    
+    gap: 12px;               
+    margin-bottom: 6px;   
+    font-size: 16px;
+}
+.lin div{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    transition: .3s;
+}
+.lin div i{
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.lin a:hover{
+    color: #0ef;
+}
